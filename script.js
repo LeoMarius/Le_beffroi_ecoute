@@ -4,10 +4,11 @@ let audioData = { audios: [] }; // Initialiser avec un tableau vide
 let ambianceAudio = null;
 let currentAudio = null;
 let isFading = false;
+let ambianceRunning = false;
 
 // Configuration
-const volume_low = 40;
-const volume_high = 100;
+const volume_low = 0.1;
+const volume_high = 1;
 const fadding = 3; // en secondes
 
 // Initialisation au chargement de la page
@@ -84,6 +85,9 @@ function checkUrlParameter() {
 
 // Change le volume de l'ambiance progressivement
 function volume_son_ambiance(targetVolume) {
+
+    ambianceAudio.volume = targetVolume;
+    return;
     if (!ambianceAudio || isFading) return;
     
     isFading = true;
@@ -109,6 +113,10 @@ function volume_son_ambiance(targetVolume) {
 
 // Lit un son spécifique
 function lire_son(id) {
+    if (ambianceRunning===false) {
+        initAmbiance();
+        ambianceRunning = true;
+    }
     // Si le même son est déjà en cours de lecture, on ne fait rien
     if (current_id === id) return;
     
