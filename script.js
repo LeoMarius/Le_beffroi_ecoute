@@ -113,12 +113,10 @@ function volume_son_ambiance(targetVolume) {
 
 // Lit un son spécifique
 function lire_son(id) {
-
     if (ambianceRunning===false) {
         initAmbiance();
         ambianceRunning = true;
     }
-
     // Si le même son est déjà en cours de lecture, on ne fait rien
     if (current_id === id) return;
     
@@ -143,22 +141,15 @@ function lire_son(id) {
     currentAudio = new Audio(audioInfo.path);
     currentAudio.volume = 1;
     
-    // Afficher le lecteur audio
-    const audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = audioInfo.path;
-    audioPlayer.style.display = 'block';
-    
     // Afficher l'information de lecture
     document.getElementById('current-title').textContent = audioInfo.titre;
     document.getElementById('current-playing').classList.remove('hidden');
     
     // Configurer l'événement de fin
     currentAudio.addEventListener('ended', fin_son);
-    audioPlayer.addEventListener('ended', fin_son);
     
     // Jouer l'audio
     currentAudio.play().catch(e => console.log("Erreur lecture audio:", e));
-    audioPlayer.play().catch(e => console.log("Erreur lecture player:", e));
 }
 
 // Arrête le son en cours
