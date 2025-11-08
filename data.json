@@ -1,0 +1,22 @@
+{
+    "audios": [
+        { 
+            "name": "nom_de_audio",
+            "titre": "Jeff aux catacombes",
+            "path": "/audio/boulogne.mp3",
+            "url": "catacombes",
+            "keyboard_key": "a",
+            "duree": 40,
+            "id": 13
+        },
+        { 
+            "name": "autre_audio",
+            "titre": "Mamie au tango",
+            "path": "/audio/arras.mp3",
+            "url": "tango",
+            "keyboard_key": "b",
+            "duree": 64,
+            "id": 25
+        }
+    ]
+}
