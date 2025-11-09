@@ -3,20 +3,65 @@
         { 
             "name": "nom_de_audio",
             "titre": "Jeff aux caca",
-            "path": "/audio/boulogne.mp3",
+            "path": "/audio/00.mp3",
             "url": "caca",
-            "keyboard_key": "a",
-            "duree": 40,
-            "id": 13
+            "keyboard_key": "up",
+            "keycode": 38,
+            "id": 1
         },
         { 
             "name": "autre_audio",
             "titre": "Mamie au tango",
-            "path": "/audio/arras.mp3",
+            "path": "/audio/01.mp3",
             "url": "tango",
-            "keyboard_key": "b",
-            "duree": 64,
-            "id": 25
+            "keyboard_key": "down",
+            "keycode": 40,
+            "id": 2
+        },
+        { 
+            "name": "autre_audio",
+            "titre": "Mamie au tango",
+            "path": "/audio/02.mp3",
+            "url": "tango",
+            "keyboard_key": "left",
+            "keycode": 37,
+            "id": 3
+        },
+        { 
+            "name": "autre_audio",
+            "titre": "Mamie au tango",
+            "path": "/audio/03.mp3",
+            "url": "tango",
+            "keyboard_key": "right",
+            "keycode": 39,
+            "id": 4
+        },
+        { 
+            "name": "autre_audio",
+            "titre": "Mamie au tango",
+            "path": "/audio/04.mp3",
+            "url": "tango",
+            "keyboard_key": "g",
+            "keycode": 71,
+            "id": 5
+        },
+        { 
+            "name": "autre_audio",
+            "titre": "Mamie au tango",
+            "path": "/audio/05.mp3",
+            "url": "tango",
+            "keyboard_key": "z",
+            "keycode": 90,
+            "id": 6
+        },
+        { 
+            "name": "autre_audio",
+            "titre": "Mamie au tango",
+            "path": "/audio/06.mp3",
+            "url": "tango",
+            "keyboard_key": "space",
+            "keycode": 32,
+            "id": 7
         }
     ]
 }

@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialise l'audio d'ambiance
 function initAmbiance() {
-    ambianceAudio = new Audio('/ambiance/son.mp3');
+    ambianceAudio = new Audio('/ambiance/beffroi-backsound-master.mp3');
     ambianceAudio.loop = true;
     ambianceAudio.volume = volume_high / 100;
     ambianceAudio.play().catch(e => console.log("Erreur lecture ambiance:", e));
@@ -37,10 +37,10 @@ function initAmbiance() {
 // Configure les écouteurs d'événements clavier
 function setupKeyboardListeners() {
     document.addEventListener('keydown', function(event) {
-        const key = event.key.toLowerCase();
+        const keyCode = event.keyCode;
         
-        // Vérifier si la touche correspond à un audio
-        const audio = audioData.audios.find(a => a.keyboard_key === key);
+        // Vérifier si le keycode correspond à un audio
+        const audio = audioData.audios.find(a => a.keycode === keyCode);
         if (audio) {
             lire_son(audio.id);
         }
